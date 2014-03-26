@@ -49,15 +49,6 @@ void draw() {
     oldMouseX=mouseX;
     oldMouseY=mouseY;
   }
-
-// cancellare la schermata con DELETE
-// non funziona attualmente
-
-  if (keyPressed) {
-    if (keyCode == DELETE) {
-      background(0);
-    }
-  }
   
 }
 /*
@@ -74,7 +65,12 @@ void draw() {
  text(letter, mouseX, mouseY);
  }
  */
-
+// cancellare la schermata con DELETE
+ void keyPressed() {
+ if (key == BACKSPACE) {
+ background(0);
+ }
+ }
 
 // cambia la lettera premuta
 void keyReleased() {
