@@ -30,21 +30,23 @@ void draw() {
       G=0;
       B=230;
     }
-  } 
-  else if (key == 'g' || key == 'G') {
-    R=0;
-    G=230;
-    B=0;
-  } 
-  else if (key == 'r' || key == 'R') {
-    R=230;
-    G=0;
-    B=0;
-  } 
-  else {
-    R=230;
-    G=230;
-    B=230;
+
+    if (key == 'g' || key == 'G') {
+      R=0;
+      G=230;
+      B=0;
+    } 
+    if (key == 'r' || key == 'R') {
+      R=230;
+      G=0;
+      B=0;
+    } 
+    if (key == 'w' || key == 'W') {
+
+      R=230;
+      G=230;
+      B=230;
+    }
   }
 
   if (mousePressed) {
@@ -55,7 +57,6 @@ void draw() {
 void pennello(float x, float y, int r, int num) { 
   noStroke();
   fill(R, G, B, 50);
-  // fill (80, 100);
 
   ellipse(x, y, r, r);
 
@@ -63,5 +64,11 @@ void pennello(float x, float y, int r, int num) {
     float ny = y + sin(random(0, TWO_PI)) * 12.0;   
     float nx = x - sin(random(0, TWO_PI)) * 12.0; 
     pennello(nx, ny, int(random(r/2, r+(num/5))), num-1);
+  }
+}
+
+void keyReleased() {
+  if (key == BACKSPACE) {
+    background(0);
   }
 }
