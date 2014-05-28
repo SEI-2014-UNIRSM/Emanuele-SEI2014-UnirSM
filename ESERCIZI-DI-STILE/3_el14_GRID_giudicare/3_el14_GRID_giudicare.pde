@@ -22,6 +22,9 @@
 
 // drawing a grid of rotating hands, interacting with mouse position 
 
+// commands
+// +: increase number of hands on the screen  
+
 
 PShape finger;
 
@@ -76,8 +79,6 @@ void draw(){
   }
 
   }
-
-
 
 void keyPressed() {
 
