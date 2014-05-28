@@ -110,9 +110,9 @@ void mousePressed() {
 
 void keyReleased() {
   if (key == 's' || key == 'S') saveFrame(timestamp()+"_##.png");
-  // if (key == BACKSPACE) {
-  // filter(ERODE);
-  // }
+ if (key == BACKSPACE) {
+  background(0);
+ }
 
   // ------ pdf export ------
   // press 'r' to start pdf recordPDF and 'e' to stop it
