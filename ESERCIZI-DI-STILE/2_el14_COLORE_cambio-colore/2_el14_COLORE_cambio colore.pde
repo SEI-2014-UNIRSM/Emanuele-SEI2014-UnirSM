@@ -4,6 +4,9 @@
 
 // creation of colors selector 
 
+// commands
+// mouse click: change color mode from HSB to RGB
+
 int value = 0;
 
 void setup() {
