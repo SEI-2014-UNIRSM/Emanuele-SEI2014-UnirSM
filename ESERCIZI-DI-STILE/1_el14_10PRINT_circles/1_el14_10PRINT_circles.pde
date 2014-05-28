@@ -1,9 +1,10 @@
-/* 
-Basato su: 10 PRINT CHR$(205.5+RND(1)); : GOTO 10
-Algoritmo modificato per esercizio durante il corso SEI 2014 @ UnirSM — Più info http://goo.gl/59obuO 
-*/
+// Based on: 10 PRINT CHR$(205.5+RND(1)); : GOTO 10
+// 
+// Algorithm modified by Emanuele Lumini for the course SEI2014 @ UnirSM - More info at http://goo.gl/59obuO
+// github.com/EmanueleLumini — github.com/SEI2014-UnirSM/Emanuele-SEI2014-UnirSM
+// Made for educational purposes, MIT License, April 2014, San Marino
 
-// disegnare linee di cerchi in modo randomico
+// drawing random lines of circles 
 
 int w = 16;
 int h = 16;
