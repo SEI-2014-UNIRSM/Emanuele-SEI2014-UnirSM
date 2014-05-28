@@ -1,4 +1,4 @@
-// Basato su: P_2_2_5_01.pde
+// Based on: P_2_2_5_01.pde
 // 
 // Generative Gestaltung, ISBN: 978-3-87439-759-9
 // First Edition, Hermann Schmidt, Mainz, 2009
@@ -16,13 +16,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Algoritmo modificato per esercizio durante il corso SEI 2014 @ UnirSM — Più info http://goo.gl/59obuO 
+// Algorithm modified by Emanuele Lumini for the course SEI2014 @ UnirSM - More info at http://goo.gl/59obuO
+// github.com/EmanueleLumini — github.com/SEI2014-UnirSM/Emanuele-SEI2014-UnirSM
+// Made for educational purposes, MIT License, April 2014, San Marino
+
+// drawing random cracks on the screen
 
 
-// disegnare cerchi random (senza sovrapposizione) che uniscano i loro centri tramite una linea
-
-
-int maxCount = 5000; // numero massimo di cerchi
+int maxCount = 5000; // max number of circles
 int currentCount = 1;
 float[] x = new float[maxCount];
 float[] y = new float[maxCount];
@@ -39,7 +40,7 @@ void setup() {
   smooth();
   // cursor(CROSS);
 
-  // primo cerchio
+  // first circle
   x[0] = 200;
   y[0] = 100;
   r[0] = 50;
@@ -51,7 +52,7 @@ void setup() {
 void draw() {
   background(0);
 
-  // posizionamento random
+  // prandom position
   float newX = random(0+maxRadius,width-maxRadius);
   float newY = random(0+maxRadius,height-maxRadius);
   float newR = minRadius;
@@ -67,7 +68,7 @@ void draw() {
     }
   }
 
-  // senza intersezioni, crea un nuovo cerchio
+  // start a new circle, if no intersection
   if (intersection == false) {
     // crea cerchio vicino agli altri
     float newRadius = width;
@@ -87,12 +88,12 @@ void draw() {
     currentCount++;
   }
 
-  // disegna
+  // drawing
   for (int i=0 ; i < currentCount; i++) {
     stroke(255);
     strokeWeight(1.5);
     // ellipse(x[i],y[i], r[i]*2,r[i]*2);
-    stroke(226, 185, 0);
+    stroke(226, 185, 0, 60);
     strokeWeight(2);
     int n = closestIndex[i];
     line(x[i],y[i], x[n],y[n]); 
@@ -101,11 +102,3 @@ void draw() {
   if (currentCount >= maxCount) noLoop();
 
   }
-
-
-
-
-
-
-
-
