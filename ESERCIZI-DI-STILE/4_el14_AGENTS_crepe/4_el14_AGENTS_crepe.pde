@@ -68,9 +68,9 @@ void draw() {
     }
   }
 
-  // start a new circle, if no intersection
+  // draw a new circle, if there's no intersection
   if (intersection == false) {
-    // crea cerchio vicino agli altri
+  // draw a circle next to the others
     float newRadius = width;
     for(int i=0; i < currentCount; i++) {
       float d = dist(newX,newY, x[i],y[i]);
