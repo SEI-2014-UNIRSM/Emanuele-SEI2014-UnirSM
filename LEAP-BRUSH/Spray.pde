@@ -54,8 +54,11 @@ void pennello(float x, float y, int r, int num) {
   }
 }
 
-
-
+void keyReleased() {
+ if (key == BACKSPACE) {
+  background(0);
+ }
+}
 
 
 
