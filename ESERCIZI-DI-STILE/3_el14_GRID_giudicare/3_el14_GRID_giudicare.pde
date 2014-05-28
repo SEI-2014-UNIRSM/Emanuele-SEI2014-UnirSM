@@ -1,5 +1,5 @@
-// Basato su: P_2_1_1_04.pde
- 
+// Based on: P_2_1_1_04.pde
+// 
 // Generative Gestaltung, ISBN: 978-3-87439-759-9
 // First Edition, Hermann Schmidt, Mainz, 2009
 // Hartmut Bohnacker, Benedikt Gross, Julia Laub, Claudius Lazzeroni
@@ -16,7 +16,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-// Algoritmo modificato per esercizio durante il corso SEI 2014 @ UnirSM — Più info http://goo.gl/59obuO 
+// Algorithm modified by Emanuele Lumini for the course SEI2014 @ UnirSM - More info at http://goo.gl/59obuO
+// github.com/EmanueleLumini — github.com/SEI2014-UnirSM/Emanuele-SEI2014-UnirSM
+// Made for educational purposes, MIT License, April 2014, San Marino
+
+// drawing a grid of rotating hands, interacting with mouse position 
 
 
 PShape finger;
@@ -41,6 +45,7 @@ void setup(){
   tileWidth = width/float(tileCount);
   tileHeight = height/float(tileCount);
 
+  // load picture
   finger = loadShape("module_01.svg");
 } 
 
@@ -49,6 +54,7 @@ void draw(){
   background(255);
   smooth();
 
+ // grid
   for (int gridY=0; gridY<tileCount; gridY++) {
     for (int gridX=0; gridX<tileCount; gridX++) {
 
@@ -75,6 +81,7 @@ void draw(){
 
 void keyPressed() {
 
+ // zoom
   if (key == '+') {
     tileCount = tileCount+5;
     if (tileCount > 20) {
